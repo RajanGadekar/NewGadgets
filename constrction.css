@@ -1,0 +1,124 @@
+.menubar{
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    float: left;
+    background-color: white;
+    margin-top: -10px;
+}
+.logo{
+  margin-top:20px;
+  margin-left:100px;
+}
+.menuoption{
+    width: 100%;
+    height: 55px;
+    float: left;
+    margin-top:100px; 
+    background-color:yellow; 
+}
+.menuoption li{
+    padding: 15px 20px 20px 10px;
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+}
+.menuoption a{
+    text-decoration: none;
+    color: black;
+}
+.homepage{
+    margin-left:350px;
+}
+.pages .subpage1 li{
+    display:block;
+    /* margin-left: -100px; */
+   padding: 10px 40px 3px 10px ;
+    width: 100px;
+    
+}
+ .subpage1 {
+    position: absolute;
+    top:50px;
+    color: black;
+    margin-left: -70;
+    background-color: aliceblue;
+    border-radius: 10px;
+    font-size: 20px;
+    display: none;
+
+}
+.pages:hover .subpage1{
+    display: block;
+    width: 130px;    
+}
+ 
+
+
+
+
+
+
+/*Media Query*/
+@media(max-width:667px){
+    .homepage{
+    margin-left:5px;
+}
+    .menuoption{
+    width: 100%;
+    height: 55px;
+    float: left;
+    margin-top:100px; 
+    background-color:yellow; 
+}
+.menuoption li{
+     padding: 15px 10px 10px 0px;
+    float: left;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+}
+.menuoption a{
+    text-decoration: none;
+    color: black;
+}
+}
+
+@media(max-width:667px){
+   .bar3{
+   padding: 25px;
+   float: left;
+   font-size: 30px;
+   cursor: pointer;
+}
+}
+ @media(max-width:667px){
+.phonemenu .phonemenuoption li{
+    display:block;
+    /* margin-left: -100px; */
+   padding: 5px 10px 3px 5px ;
+    width: 140px;
+    
+}
+ .phonemenuoption {
+    position: absolute;
+    top:150px;
+    color: black;
+    background-color: aliceblue;
+    border-radius:10px;
+    font-size: 20px;
+    display: none;
+
+}
+.phonemenu:hover .phonemenuoption{
+    display: block;
+}
+  }
+.phonemenu .phonemenuoption{
+    display: none;
+}

@@ -1,0 +1,78 @@
+<html>
+    <head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css">
+	<!--js-->
+	<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    </head>
+     
+    <div class="container">
+      <div class="row mt-5">
+          <h1 class="text-center mb-4">Billing System</h1>
+        <div class="col-md-4">
+            
+	<label>Product</label>
+	<input type="text" name="" id='Pro'>
+          </div>
+          <div class="col-md-4">
+	<label>Quantity</label>
+	<input type="number" name="" id='Quan'>
+          </div>
+          <div class="col-md-4">
+	<label>Rate</label>
+	<input type="text" name="" id='Rate'>
+          </div>
+	<button class="btn btn-warning text-center mt-4" type="button" onclick="myFunction()">Save</button>
+         
+       </div>
+    </div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+ <table class="table text-center" id="myTableData">
+  <tr>
+  	<th>Sr.No</th>
+    <th>Product</th>
+    <th>Quantity</th>
+    <th>Rate</th>
+    <th>Total</th>
+</tr>
+</table>
+        </div>
+    </div>
+    </div>
+<body>
+	<script type="text/javascript">
+		var i = 1;
+		function myFunction(){
+			var Product = document.getElementById('Pro');
+			var Quantity = document.getElementById('Quan');
+			var Rate = document.getElementById('Rate');
+			var table = document.getElementById("myTableData");
+			var total = Quantity.value*Rate.value;
+
+            var rowCount = table.rows.length;
+            var row = table.insertRow(rowCount);
+               
+            row.insertCell(0).innerHTML=i++;
+            row.insertCell(1).innerHTML=Product.value;
+            row.insertCell(2).innerHTML=Quantity.value;
+            row.insertCell(3).innerHTML=Rate.value;
+            row.insertCell(4).innerHTML=total;
+		}
+	</script>
+</body>
+    
+</html>
